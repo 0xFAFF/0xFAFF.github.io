@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "Lato";
+  src: url("fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("fonts/Lato-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mollen";
+  src: url("fonts/Mollen-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mollen";
+  src: url("fonts/Mollen-Bold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato";
+  background: #2a323d;
+}
+
+a {
+  color: white;
+}
+
+.container {
+  color: #ffffff;
+  width: 100%;
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/splash.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: none;
+}
+
+.headline {
+  margin-bottom: 10vh;
+  width: 100%;
+  background-color: rgba(16, 16, 16, 0.5);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+.headline .logo {
+  display: flex;
+  flex: 1 0;
+  text-align: center;
+  margin: auto;
+  font-size: 5vw;
+  margin-left: 5vw;
+  font-weight: bold;
+  font-family: "Mollen";
+}
+
+.headline .text {
+  display: flex;
+  flex: 1 0;
+  font-size: 3.5vw;
+  width: 40vw;
+  margin: 0.6vw;
+}
+
+.team-member {
+  position: relative;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 8rem;
+  text-align: left;
+  display: flex;
+  flex-flow: row;
+}
+
+.info-container {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 25px;
+  background: rgb(35, 35, 35);
+  display: inline-block;
+}
+
+.pull-left .info-container {
+  padding-left: 315px;
+  order: 2;
+}
+
+.pull-right .info-container {
+  padding-right: 315px;
+  order: 1;
+}
+
+.info {
+  padding: 65px;
+}
+
+.info h1 {
+  font-size: 2.1rem;
+  font-weight: 900;
+  margin: 0;
+  padding: 0;
+}
+
+.info p,
+.info ul,
+.info h2 {
+  font-size: 1.6rem;
+  margin: 0;
+  margin-top: 1rem;
+  line-height: 1.3;
+  color: rgb(230, 230, 230);
+}
+
+.photo-container {
+  position: relative;
+  top: -35px;
+}
+
+.pull-left .photo-container {
+  left: 315px;
+  margin-left: -350px;
+  order: 1;
+}
+
+.pull-right .photo-container {
+  margin-right: -350px;
+  right: 315px;
+  order: 2;
+}
+
+.photo {
+  position: relative;
+  width: 350px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.5);
+}
+
+.content-wrap {
+  position: relative;
+  /* Same as footer height */
+  padding-bottom: 10rem;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-container {
+  background: linear-gradient(transparent, black);
+  text-align: center;
+  width: 100%;
+  height: 10vh;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.contact {
+  margin: 25px;
+  position: relative;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  z-index: 1;
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+  background: rgb(16, 16, 16);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
+  color: white;
+}
+
+.footer-content {
+  margin: 2rem;
+}
+
+.footer-splash {
+  background: rgb(16, 16, 16);
+  height: 15vh;
+  position: relative;
+  top: -5vh;
+  margin-bottom: -15vh;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-mask-image: url("images/silhouette.png");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: bottom center;
+  mask-image: url("images/silhouette.png");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: bottom center;
+}
+
+@media screen and (max-width: 1400px) {
+  .headline {
+    flex-direction: column;
+  }
+  .headline .logo {
+    font-size: 5vh;
+    margin-top: 5vh;
+  }
+  .headline .text {
+    font-size: 3.5vh;
+    width: initial;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
