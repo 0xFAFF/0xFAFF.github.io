@@ -33,6 +33,25 @@
   font-style: normal;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(50, 50, 50, 0.5);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #111;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 html,
 body {
   margin: 0;
@@ -41,6 +60,23 @@ body {
   height: 100%;
   font-family: "Lato";
   background: #2a323d;
+  overflow: hidden;
+}
+
+.page {
+  min-height: 80vh;
+  padding-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay {
+  position: fixed;
+  overflow-y: scroll;
+  top: 0;
+  right: 0;
+  bottom: 5rem;
+  left: 0;
 }
 
 a {
@@ -61,7 +97,8 @@ a {
 }
 
 .headline {
-  margin-bottom: 10vh;
+  top: 10vh;
+  position: relative;
   width: 100%;
   background-color: rgba(16, 16, 16, 0.5);
   display: flex;
@@ -75,6 +112,8 @@ a {
   flex: 1 0;
   text-align: center;
   margin: auto;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
   font-size: 5vw;
   margin-left: 5vw;
   font-weight: bold;
@@ -90,10 +129,12 @@ a {
 }
 
 .team-member {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20vh;
   position: relative;
-  margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 8rem;
+  top: 20vh;
   text-align: left;
   display: flex;
   flex-flow: row;
@@ -103,17 +144,14 @@ a {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
   border-radius: 25px;
   background: rgb(35, 35, 35);
-  display: inline-block;
 }
 
 .pull-left .info-container {
   padding-left: 315px;
-  order: 2;
 }
 
 .pull-right .info-container {
   padding-right: 315px;
-  order: 1;
 }
 
 .info {
@@ -163,7 +201,7 @@ a {
 .content-wrap {
   position: relative;
   /* Same as footer height */
-  padding-bottom: 10rem;
+  padding-bottom: 5rem;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
@@ -176,6 +214,7 @@ a {
   height: 10vh;
   margin: auto;
   margin-bottom: 0;
+  pointer-events: none;
 }
 
 .contact {
@@ -187,6 +226,7 @@ a {
   margin-right: auto;
   display: inline-block;
   z-index: 1;
+  pointer-events: initial;
 }
 
 .footer {
@@ -196,7 +236,7 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 10rem;
+  height: 5rem;
   color: white;
 }
 
@@ -235,7 +275,23 @@ a {
     width: initial;
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 5vh;
+    margin-top: 0;
     margin-bottom: 5vh;
   }
+  .team-member {
+    flex-direction: column;
+  }
+  .pull-right .info-container {
+    padding-right: 0px;
+  }
+  .pull-right .photo-container {
+    margin-right: auto;
+    margin-left: auto;
+    right: initial;
+    order: initial;
+  }
+  .photo-container {
+    top: initial;
+    bottom: -35px;
+}
 }
