@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>FAFF Games</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-  </head>
-  <body>
-    <div class="container">
+import './App.css';
+import alex from "./images/alex.jpg";
+
+function App() {
+  return (
+    <>
       <div class="content-wrap">
         <div class="overlay">
           <div class="page">
@@ -24,7 +19,7 @@
               <div class="logo"><div>Team</div></div>
             </div>
             <div class="team-member pull-right">
-              <div class="photo-container"><img class="photo" src="images/alex.jpg" /></div>
+              <div class="photo-container"><img class="photo" src={alex} /></div>
               <div class="info-container">
                 <div class="info">
                   <h1>Alex Sherman &nbsp;&middot;&nbsp; Founder</h1>
@@ -51,6 +46,8 @@
           <div class="copyright">&copy; 2023 FAFF Games</div>
         </div>
       </footer>
-    </div>
-  </body>
-</html>
+    </>
+  );
+}
+
+export default App;

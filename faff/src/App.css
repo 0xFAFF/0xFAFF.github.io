@@ -83,7 +83,7 @@ a {
   color: white;
 }
 
-.container {
+#root {
   color: #ffffff;
   width: 100%;
   position: relative;
@@ -126,6 +126,13 @@ a {
   font-size: 3.5vw;
   width: 40vw;
   margin: 0.6vw;
+}
+
+.headline ul {
+  margin: 0;
+}
+.headline li {
+  list-style-type: none;
 }
 
 .team-member {
