@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0dd573bc.css",
+    "main.js": "/static/js/main.2a7bf4f3.js",
+    "static/media/splash.jpg": "/static/media/splash.7f26fe129ee33d69c543.jpg",
+    "static/media/alex.jpg": "/static/media/alex.d75155436f43fdbd92a4.jpg",
+    "static/media/silhouette.png": "/static/media/silhouette.ad02ae9f08e3973b51f7.png",
+    "static/media/Lato-Regular.ttf": "/static/media/Lato-Regular.9919edff6283018571ad.ttf",
+    "static/media/Lato-Bold.ttf": "/static/media/Lato-Bold.5dd5aa0269395f0ea927.ttf",
+    "static/media/Lato-Black.ttf": "/static/media/Lato-Black.0b51cf32bbc2d8b8d840.ttf",
+    "static/media/Mollen-Bold.otf": "/static/media/Mollen-Bold.6c40c8d8804761eac4c7.otf",
+    "static/media/Mollen-Regular.otf": "/static/media/Mollen-Regular.6fbf0cccc4710042da75.otf",
+    "index.html": "/index.html",
+    "main.0dd573bc.css.map": "/static/css/main.0dd573bc.css.map",
+    "main.2a7bf4f3.js.map": "/static/js/main.2a7bf4f3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0dd573bc.css",
+    "static/js/main.2a7bf4f3.js"
+  ]
+}
