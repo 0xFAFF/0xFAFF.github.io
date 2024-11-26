@@ -6,7 +6,7 @@ export default function Faff() {
     <div className="background">
       <div class="content-wrap">
         <div class="overlay">
-          <div class="page">
+          <section>
             <div class="headline">
               <div class="logo">
                 <div>FAFF Games</div>
@@ -15,8 +15,8 @@ export default function Faff() {
                 <div>Indie game studio. Building games for ourselves, when we find time.</div>
               </div>
             </div>
-          </div>
-          <div class="page">
+          </section>
+          <section>
             <div class="headline">
               <div class="logo">
                 <div>Team</div>
@@ -38,7 +38,7 @@ export default function Faff() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
         </div>
         <div class="contact-container">
           <div class="footer-splash"></div>

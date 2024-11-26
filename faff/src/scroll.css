@@ -1,23 +1,62 @@
+.scroll-snap {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  scroll-snap-type: both mandatory;
+  overflow-y: scroll;
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+}
+
 .bg-image {
   transition: opacity 0.3s;
-  z-index:-10;
+  opacity: 0;
+  z-index: -10;
   position: fixed;
-  top: -10vh;
+  top: 0;
+  bottom: 5rem;
   left: 0;
-  height: 120vh;
-  width: 100%;
+  right: 12px;
+  background: black;
 }
+
 .bg-image-inner {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-.bg-image img {
+.bg-image img,
+.bg-image video {
   position: absolute;
   height: 100%;
   width: 100%;
   inset: 0px;
   object-fit: cover;
   color: transparent;
+}
+
+.card {
+  transform: translateY(-50%);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20vh;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-flow: row;
+  text-shadow: black 0 0 5px;
+}
+
+.vertical-50 {
+  width: 100%;
+  position: absolute;
 }
