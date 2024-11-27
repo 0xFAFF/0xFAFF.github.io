@@ -58,8 +58,8 @@ function Card({ top, children }) {
 
 function Banner({ children }) {
   return (
-    <div class="headline">
-      <div class="logo">{children}</div>
+    <div className="heading">
+      <h1>{children}</h1>
     </div>
   );
 }
@@ -81,44 +81,48 @@ function Page({ children, container }) {
 export default function Xurb() {
   const ref = useRef(null);
   return (
-    <div className="scroll-snap" ref={ref}>
-      <Page container={ref}>
-        <BGSplash>
-          <SlideShow>
-            <img src={inventory} />
-            <img src={militaryman} />
-            <img src={lafayetteman} />
-            <img src={lonepineump} />
+    <>
+      <div className="scroll-snap" ref={ref}>
+        <Page container={ref}>
+          <BGSplash>
+            <SlideShow>
+              <img src={inventory} />
+              <img src={militaryman} />
+              <img src={lafayetteman} />
+              <img src={lonepineump} />
             </SlideShow>
-        </BGSplash>
-        <Banner>XURB</Banner>
-      </Page>
-      <Page container={ref}>
-        <BGSplash>
-          <Video src={suburbs} />
-        </BGSplash>
-        <Banner>The Suburbs</Banner>
-        <Card top="70vh">
-          <p>
-            You find yourself stranded in a deserted suburban neighborhood: doors are haphazardly
-            thrown open and burning cars block the streets. Any few remaining civilians are thrown
-            into a panic, with the more fortunate survivors quickly converging into hostile
-            factions. You have little time, and with the permadeath format of this game the stakes
-            are high.
-          </p>
-        </Card>
-      </Page>
-      <Page container={ref}>
-        <BGSplash>
-          <img src={splash} />
-        </BGSplash>
-        <Banner>XURB</Banner>
-      </Page>
+          </BGSplash>
+          <div className="heading">
+            <h1>XURB</h1>
+          </div>
+        </Page>
+        <Page container={ref}>
+          <BGSplash>
+            <Video src={suburbs} />
+          </BGSplash>
+          <Banner>The Suburbs</Banner>
+          <Card top="70vh">
+            <p>
+              You find yourself stranded in a deserted suburban neighborhood: doors are haphazardly
+              thrown open and burning cars block the streets. Any few remaining civilians are thrown
+              into a panic, with the more fortunate survivors quickly converging into hostile
+              factions. You have little time, and with the permadeath format of this game the stakes
+              are high.
+            </p>
+          </Card>
+        </Page>
+        <Page container={ref}>
+          <BGSplash>
+            <img src={splash} />
+          </BGSplash>
+          <Banner>XURB</Banner>
+        </Page>
+      </div>
       <footer class="footer">
         <div class="footer-content">
           <div class="copyright">&copy; 2023 FAFF Games</div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }

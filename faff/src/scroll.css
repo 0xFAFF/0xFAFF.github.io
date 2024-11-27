@@ -10,9 +10,30 @@
 }
 
 section {
-  min-height: 100vh;
+  height: 100%;
   position: relative;
   scroll-snap-align: start;
+}
+.heading {
+  top: 10vh;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+
+section h1 {
+  text-shadow: black 0 0 20px;
+  display: flex;
+  flex: 1 0;
+  text-align: center;
+  margin: auto;
+  font-size: 7vmin;
+  margin-left: 5vw;
+  font-weight: bold;
+  font-family: "Mollen";
 }
 
 .bg-image {
@@ -23,7 +44,7 @@ section {
   top: 0;
   bottom: 5rem;
   left: 0;
-  right: 12px;
+  right: 0px;
   background: black;
 }
 
