@@ -59,9 +59,7 @@ function Card({ top, children }) {
 
 function Banner({ children, className = "heading" }) {
   return (
-    <div className={className}>
-      <h1>{children}</h1>
-    </div>
+      <h1 className={className}>{children}</h1>
   );
 }
 

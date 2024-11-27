@@ -15,29 +15,27 @@ section {
   scroll-snap-align: start;
 }
 
-.heading {
+section h1 {
+  margin: 0;
+  text-shadow: black 0 0 20px;
+  font-weight: bold;
+  font-family: "Mollen";
+  display: inline-block;
+}
+
+section h1.heading {
+  font-size: 9vmin;
   top: 10vh;
   left: 5vw;
   position: relative;
 }
 
-.title {
-  transform: translate(-50%, -50%) ;
+section h1.title {
+  transform: translate(-50%, -50%);
   top: 50vh;
   left: 50vw;
   position: relative;
-}
-
-section h1 {
-  text-shadow: black 0 0 20px;
-  font-size: 7vmin;
-  font-weight: bold;
-  font-family: "Mollen";
-}
-
-.title h1 {
   font-size: 17vmin;
-  text-align: center;
 }
 
 .bg-image {
