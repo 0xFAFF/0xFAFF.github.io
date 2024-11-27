@@ -14,26 +14,30 @@ section {
   position: relative;
   scroll-snap-align: start;
 }
+
 .heading {
   top: 10vh;
+  left: 5vw;
   position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  flex-direction: row;
+}
+
+.title {
+  transform: translate(-50%, -50%) ;
+  top: 50vh;
+  left: 50vw;
+  position: relative;
 }
 
 section h1 {
   text-shadow: black 0 0 20px;
-  display: flex;
-  flex: 1 0;
-  text-align: center;
-  margin: auto;
   font-size: 7vmin;
-  margin-left: 5vw;
   font-weight: bold;
   font-family: "Mollen";
+}
+
+.title h1 {
+  font-size: 17vmin;
+  text-align: center;
 }
 
 .bg-image {

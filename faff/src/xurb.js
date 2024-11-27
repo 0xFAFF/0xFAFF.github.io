@@ -7,6 +7,7 @@ import inventory from "./xurb/images/inventory.png";
 import lafayetteman from "./xurb/images/lafayetteman.png";
 import militaryman from "./xurb/images/militaryman.png";
 import lonepineump from "./xurb/images/lonepineump.png";
+import countryhills from "./xurb/images/countryhills.png";
 import { motion, useScroll } from "framer-motion";
 
 function Video(props) {
@@ -56,9 +57,9 @@ function Card({ top, children }) {
   );
 }
 
-function Banner({ children }) {
+function Banner({ children, className = "heading" }) {
   return (
-    <div className="heading">
+    <div className={className}>
       <h1>{children}</h1>
     </div>
   );
@@ -84,33 +85,31 @@ export default function Xurb() {
     <>
       <div className="scroll-snap" ref={ref}>
         <Page container={ref}>
+          <Banner className="title">XURB</Banner>
           <BGSplash>
             <SlideShow>
+              <img src={countryhills} />
               <img src={inventory} />
               <img src={militaryman} />
               <img src={lafayetteman} />
               <img src={lonepineump} />
             </SlideShow>
           </BGSplash>
-          <div className="heading">
-            <h1>XURB</h1>
-          </div>
         </Page>
         <Page container={ref}>
-          <BGSplash>
-            <Video src={suburbs} />
-          </BGSplash>
-          <Banner>The Suburbs</Banner>
-          <Card top="70vh">
+          <Card top="50vh">
             <p>
               You find yourself stranded in a deserted suburban neighborhood: doors are haphazardly
               thrown open and burning cars block the streets. Any few remaining civilians are thrown
               into a panic, with the more fortunate survivors quickly converging into hostile
-              factions. You have little time, and with the permadeath format of this game the stakes
-              are high.
+              factions.
             </p>
           </Card>
+          <BGSplash>
+            <Video src={suburbs} />
+          </BGSplash>
         </Page>
+
         <Page container={ref}>
           <BGSplash>
             <img src={splash} />
