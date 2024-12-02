@@ -7,35 +7,37 @@
   right: 0;
   scroll-snap-type: both mandatory;
   overflow-y: scroll;
+  overflow-x: hidden;
+  outline: none;
 }
 
 section {
   height: 100%;
   position: relative;
   scroll-snap-align: start;
+  font-family: "Mollen";
 }
 
 section h1 {
   margin: 0;
   text-shadow: black 0 0 20px;
   font-weight: bold;
-  font-family: "Mollen";
   display: inline-block;
 }
 
 section h1.heading {
   font-size: 9vmin;
   top: 10vh;
-  left: 5vw;
+  left: 9vmin;
   position: relative;
 }
 
 section h1.title {
   transform: translate(-50%, -50%);
-  top: 50vh;
+  top: 40vh;
   left: 50vw;
   position: relative;
-  font-size: 17vmin;
+  font-size: 20vmin;
 }
 
 .bg-image {
@@ -71,12 +73,21 @@ section h1.title {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20vh;
   position: relative;
-  text-align: left;
+  justify-content: center;
   display: flex;
   flex-flow: row;
   text-shadow: black 0 0 5px;
+  padding: 5vmin;
+}
+
+.card b {
+  text-shadow: 0 0 10px #000, 0 0 7px #ffffff, 0 0 10px #000;
+}
+
+.card p {
+  margin: 0;
+  font-size: 4.5vmin;
 }
 
 .vertical-50 {

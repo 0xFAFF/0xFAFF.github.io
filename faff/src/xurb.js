@@ -1,13 +1,6 @@
 import React, { Children, useEffect, useRef, useState } from "react";
 import "./scroll.css";
-import alex from "./images/alex.jpg";
-import splash from "./images/splash.jpg";
-import suburbs from "./xurb/video/suburbs.mp4";
-import inventory from "./xurb/images/inventory.png";
-import lafayetteman from "./xurb/images/lafayetteman.png";
-import militaryman from "./xurb/images/militaryman.png";
-import lonepineump from "./xurb/images/lonepineump.png";
-import countryhills from "./xurb/images/countryhills.png";
+import environment from "./xurb/video/environment.mp4";
 import { motion, useScroll } from "framer-motion";
 
 function Video(props) {
@@ -49,7 +42,7 @@ function SlideShow({ children }) {
 
 function Card({ top, children }) {
   return (
-    <div style={{ top, width: "100%", position: "absolute" }}>
+    <div style={{ top, width: "100%", position: "absolute", height: "0" }}>
       <div class="card">
         <div class="info">{children}</div>
       </div>
@@ -58,9 +51,7 @@ function Card({ top, children }) {
 }
 
 function Banner({ children, className = "heading" }) {
-  return (
-      <h1 className={className}>{children}</h1>
-  );
+  return <h1 className={className}>{children}</h1>;
 }
 
 function Page({ children, container }) {
@@ -84,35 +75,17 @@ export default function Xurb() {
       <div className="scroll-snap" ref={ref}>
         <Page container={ref}>
           <Banner className="title">XURB</Banner>
-          <BGSplash>
-            <SlideShow>
-              <img src={countryhills} />
-              <img src={inventory} />
-              <img src={militaryman} />
-              <img src={lafayetteman} />
-              <img src={lonepineump} />
-            </SlideShow>
-          </BGSplash>
-        </Page>
-        <Page container={ref}>
-          <Card top="50vh">
-            <p>
-              You find yourself stranded in a deserted suburban neighborhood: doors are haphazardly
-              thrown open and burning cars block the streets. Any few remaining civilians are thrown
-              into a panic, with the more fortunate survivors quickly converging into hostile
-              factions.
-            </p>
+          <Card top="70vh">
+            <iframe
+              src="https://store.steampowered.com/widget/2314350/?t=Request%20access%20to%20the%20closed%20alpha%20on%20the%20Steam%20store%20page!"
+              frameborder="0"
+              width="400"
+              height="190"
+            ></iframe>
           </Card>
           <BGSplash>
-            <Video src={suburbs} />
+            <Video src={environment} />
           </BGSplash>
-        </Page>
-
-        <Page container={ref}>
-          <BGSplash>
-            <img src={splash} />
-          </BGSplash>
-          <Banner>XURB</Banner>
         </Page>
       </div>
       <footer class="footer">
