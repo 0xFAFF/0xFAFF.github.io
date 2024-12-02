@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.74ac29c0.css",
-    "main.js": "/static/js/main.6e400eb5.js",
+    "main.js": "/static/js/main.efd14d75.js",
     "static/media/environment.mp4": "/static/media/environment.83243fbccf7bfd9cba1b.mp4",
     "static/media/splash.jpg": "/static/media/splash.7f26fe129ee33d69c543.jpg",
     "static/media/stash.jpg": "/static/media/stash.655e90380907a2031680.jpg",
@@ -22,10 +22,10 @@
     "static/media/Mollen-Regular.otf": "/static/media/Mollen-Regular.6fbf0cccc4710042da75.otf",
     "index.html": "/index.html",
     "main.74ac29c0.css.map": "/static/css/main.74ac29c0.css.map",
-    "main.6e400eb5.js.map": "/static/js/main.6e400eb5.js.map"
+    "main.efd14d75.js.map": "/static/js/main.efd14d75.js.map"
   },
   "entrypoints": [
     "static/css/main.74ac29c0.css",
-    "static/js/main.6e400eb5.js"
+    "static/js/main.efd14d75.js"
   ]
 }
