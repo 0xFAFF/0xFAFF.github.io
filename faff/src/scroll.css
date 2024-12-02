@@ -27,7 +27,7 @@ section h1 {
 
 section h1.heading {
   font-size: 9vmin;
-  top: 10vh;
+  top: 5vh;
   left: 9vmin;
   position: relative;
 }
@@ -79,6 +79,7 @@ section h1.title {
   flex-flow: row;
   text-shadow: black 0 0 5px;
   padding: 5vmin;
+  font-size: 4.5vmin;
 }
 
 .card b {
@@ -87,7 +88,6 @@ section h1.title {
 
 .card p {
   margin: 0;
-  font-size: 4.5vmin;
 }
 
 .vertical-50 {
