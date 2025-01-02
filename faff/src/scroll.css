@@ -82,11 +82,17 @@ section h1.title {
   font-size: 4.5vmin;
 }
 
+.card.with-background {
+  background-color: #242424;
+  border-radius: 4vmin;
+}
+
 .card b {
   text-shadow: 0 0 10px #000, 0 0 7px #ffffff, 0 0 10px #000;
 }
 
-.card p {
+.card p,
+.card ul {
   margin: 0;
 }
 

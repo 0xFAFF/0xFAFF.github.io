@@ -20,13 +20,9 @@ function Video(props) {
 
 function BGSplash({ scrollYProgress, img, video, children }) {
   return (
-    <motion.div class="bg-image" style={{ opacity: scrollYProgress }}>
-      <div className="bg-image-inner">
-        {children}
-        {img && <img src={img} />}
-        {video && <Video src={video} />}
-      </div>
-    </motion.div>
+    <div class="bg-image" style={{ opacity: scrollYProgress }}>
+      <div className="bg-image-inner">{children}</div>
+    </div>
   );
 }
 
@@ -51,10 +47,10 @@ function SlideShow({ children }) {
   );
 }
 
-function Card({ top, bottom, children }) {
+function Card({ top, bottom, background, children }) {
   return (
     <div style={{ top, bottom, width: "100%", position: "absolute" }}>
-      <div class="card">{children}</div>
+      <div className={"card" + (background ? " with-background" : "")}>{children}</div>
     </div>
   );
 }
@@ -66,13 +62,18 @@ function Banner({ children, className = "heading" }) {
 function Page({ children, container }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
+    layoutEffect: false,
     target: ref,
     container: container,
     offset: [".5 end", ".500001 end"],
   });
+  const [hookedYPostion, setHookedYPosition] = React.useState(scrollYProgress.get());
+  scrollYProgress.onChange((v) => setHookedYPosition(v));
   return (
     <section ref={ref}>
-      {React.Children.map(children, (child) => React.cloneElement(child, { scrollYProgress }))}
+      {React.Children.map(children, (child) =>
+        React.cloneElement(child, { scrollYProgress: hookedYPostion })
+      )}
     </section>
   );
 }
@@ -93,7 +94,7 @@ export default function Pitch() {
         </Page>
         <Page container={ref}>
           <Banner>Elevator Pitch</Banner>
-          <Card top="50vh">
+          <Card top="50vh" background>
             <ul>
               <li>
                 <b>DayZ</b> meets <b>Tarkov</b>, with an <b>idle game</b> progression
@@ -117,9 +118,6 @@ export default function Pitch() {
           </Card>
         </Page>
         <Page container={ref}>
-          <BGSplash>
-            <img src={houses3} />
-          </BGSplash>
           <Card bottom="0vh">
             <p>
               You wake up in a patch of woods at the end of a cul-de-sac. In your pockets are: a
@@ -188,7 +186,7 @@ export default function Pitch() {
             </p>
           </Card>
           <BGSplash>
-            <img style={{"objectPosition": "left"}} src={stash} />
+            <img style={{ objectPosition: "left" }} src={stash} />
           </BGSplash>
         </Page>
         <Page container={ref}>

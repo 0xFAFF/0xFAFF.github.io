@@ -57,6 +57,7 @@ function Banner({ children, className = "heading" }) {
 function Page({ children, container }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
+    layoutEffect: false,
     target: ref,
     container: container,
     offset: [".5 end", ".500001 end"],
