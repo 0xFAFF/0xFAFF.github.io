@@ -1,17 +1,16 @@
 import React, { Children, useEffect, useRef, useState } from "react";
-import "./scroll.css";
-import splash from "./images/splash.jpg";
-import environment from "./xurb/video/environment.mp4";
-import houses from "./xurb/images/houses.jpg";
-import houses2 from "./xurb/images/houses2.jpg";
-import houses3 from "./xurb/images/houses3.jpg";
-import countryhills from "./xurb/images/countryhills.jpg";
-import healthbars from "./xurb/images/healthbars.png";
-import food from "./xurb/images/food.png";
-import loot from "./xurb/images/loot.jpg";
-import stash from "./xurb/images/stash.jpg";
-import medical from "./xurb/images/medical.png";
-import inventory from "./xurb/images/inventory.jpg";
+import "@faff/common/scroll.css";
+import environment from "./video/environment.mp4";
+import houses from "./images/houses.jpg";
+import houses2 from "./images/houses2.jpg";
+import houses3 from "./images/houses3.jpg";
+import countryhills from "./images/countryhills.jpg";
+import healthbars from "./images/healthbars.png";
+import food from "./images/food.png";
+import loot from "./images/loot.jpg";
+import stash from "./images/stash.jpg";
+import medical from "./images/medical.png";
+import inventory from "./images/inventory.jpg";
 import { motion, useScroll } from "framer-motion";
 
 function Video(props) {
@@ -94,7 +93,7 @@ export default function Pitch() {
         </Page>
         <Page container={ref}>
           <Banner>Elevator Pitch</Banner>
-          <Card top="50vh" background>
+          <Card top="50vh">
             <ul>
               <li>
                 <b>DayZ</b> meets <b>Tarkov</b>, with an <b>idle game</b> progression

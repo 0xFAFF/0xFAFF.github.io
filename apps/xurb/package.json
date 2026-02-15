@@ -1,7 +1,7 @@
 {
-  "name": "faff",
+  "name": "xurb",
   "version": "0.1.0",
-  "homepage": "https://faff.games",
+  "homepage": "https://xurb.game",
   "private": true,
   "dependencies": {
     "@faff/common": "^1.0.0",
@@ -17,7 +17,6 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build --cname faff.games",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

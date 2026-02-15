@@ -1,5 +1,5 @@
 {
-  "name": "faff-web-monorepo",
+  "name": "faff-root",
   "private": true,
   "workspaces": [
     "apps/*",

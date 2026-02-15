@@ -1,6 +1,6 @@
-import React, { Children, useEffect, useRef, useState } from "react";
-import "./scroll.css";
-import environment from "./xurb/video/environment.mp4";
+import React, { useEffect, useRef, useState } from "react";
+import "@faff/common/scroll.css";
+import environment from "./video/environment.mp4";
 import { motion, useScroll } from "framer-motion";
 
 function Video(props) {
@@ -34,7 +34,7 @@ function SlideShow({ children }) {
       {React.Children.map(children, (child, i) =>
         React.cloneElement(child, {
           style: { transition: "opacity 1s", opacity: i == seconds ? 1 : 0 },
-        })
+        }),
       )}
     </>
   );
