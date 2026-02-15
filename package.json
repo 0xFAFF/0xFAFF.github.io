@@ -1,0 +1,8 @@
+{
+  "name": "faff-web-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
