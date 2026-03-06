@@ -24,10 +24,6 @@ provider "aws" {
 # http://stackoverflow.com/a/5048129/2966951
 resource "aws_s3_bucket" "site" {
   bucket = var.domain
-
-  website {
-    index_document = "index.html"
-  }
 }
 
 resource "aws_s3_bucket_website_configuration" "index" {
